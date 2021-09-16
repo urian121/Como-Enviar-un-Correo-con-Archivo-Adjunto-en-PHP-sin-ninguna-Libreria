@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<form id="formulario" action="enviar.php" enctype="multipart/form-data" method="post" name="formulario">
+  <div>
+    <label>Nombre y Apellido</label>
+    <input id="nombre" name="nombre" required="" type="text" value="" />
+  </div>
+  <div>
+    <label>E-mail</label>
+    <input id="email" name="email" required="" type="email" value="" />
+  </div>
+  <div>
+    <label for="File">Desde aqui podra subir su CV...</label>
+    <input id="my_file" name="my_file" type="file" />
+  </div>
+  <button class="btn btn-danger" type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
