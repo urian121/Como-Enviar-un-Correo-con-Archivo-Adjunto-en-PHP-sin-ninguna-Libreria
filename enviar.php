@@ -1,12 +1,12 @@
 <?php   
     //Capturo los datos enviados por POST 
-    $from_email     = ($_POST["email"]); 
-    $sender_name    = ($_POST["nombre"]);
-    $reply_to_email = ($_POST["email"]); 
+    $email              = $_REQUEST["email"]; 
+    $nombreCompleto     = $_REQUEST["nombre"];
+    $desdEmail     = 'programadorphp2017@gmail.com'; 
    
-    //Armo el cuerpo del mensaje    
-    $message = "Nombre: " . $sender_name . "\n";
-    $message = $message . "Email: " . $from_email . "\n";
+    //Construyo el cuerpo del mensaje    
+    $message = "Nombre: " . $nombreCompleto . "\n";
+    $message = $message . "Email: " . $email . "\n";
    
     //Obtener datos del archivo subido 
     $file_tmp_name    = $_FILES['my_file']['tmp_name'];
@@ -25,8 +25,8 @@
   
     //Encabezados
     $headers         = "MIME-Version: 1.0\r\n"; 
-    $headers        .= "From:".$from_email."\r\n"; 
-    $headers        .= "Reply-To: ".$reply_to_email."" . "\r\n";
+    $headers        .= "From:".$email."\r\n"; 
+    $headers        .= "Reply-To: ".$desdEmail."" . "\r\n";
     $headers        .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n"; 
            
     //Texto plano
@@ -45,7 +45,7 @@
        
     $subject         = "Asunto del mensaje.";
     //Enviar el mail
-    $sentMail = mail($from_email, $subject, $body, $headers);
+    $sentMail = mail($email, $subject, $body, $headers);
    
     if($sentMail){       
         echo"<h2>Formulario enviado, revisar el Email.</h2>";

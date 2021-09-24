@@ -23,9 +23,20 @@ $sAsunto 			 = $asunto;
 
 $sCabeceras 	 	 = "From: Bienvenidos\r\n"; 
 $sCabeceras     	.= "MIME-version: 1.0\n";
-$sCabeceras 		.= "Content-type: multipart/mixed;";
-//$headers  	    .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-//$headers  	    .= "Content-type: text/calendar;"; //.ics
+$sCabeceras 		.= "Content-type: multipart/mixed;"; //para enviar archivo adjunto adjunto en el correo
+$sCabeceras         .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
+
+
+//$sCabeceras         .= "Content-Type: multipart/alternative;\n";
+//$sCabeceras         .= "Content-Type: text/plain; charset=utf-8\n";
+//$sCabeceras         .= "Content-Type: text/html; charset=utf-8\n";
+
+//$sCabeceras       .= "Content-Type: multipart/mixed;\n" //para enviar archivo adjuntos
+//$sCabeceras 		.= "Content-Type: application/pdf; name=blah.pdf\r\n";
+//$sCabeceras 		.= "Content-Type: application/doc; name=Test.doc\n";
+//$sCabeceras 		.= "Content-Type: application/Zip; name="attachment.Zip\n";
+//$sCabeceras  	    .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+//$sCabeceras  	    .= "Content-type: text/calendar;"; //.ics
 $sCabeceras 		.= "boundary=\"--_Separador-de-mensajes_--\"\n";
 
 $sCabeceraTexto 	 = "----_Separador-de-mensajes_--\n";

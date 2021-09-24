@@ -9,46 +9,45 @@
     <title>Como enviar Archivo Adjunto a correo con PHP</title>
   </head>
   <body>
-
     <nav class="navbar navbar-light bg-light " style="color: #fff !important; background-color: #563d7c !important;">
-        <a class="navbar-brand" href="https://blogangular-c7858.web.app/"> 
-            Canal WebDeveloper 
-        </a>
-        <h5 class="form-inline">Urian Viera</h5>
-    </nav>
+      <a class="navbar-brand" href="https://blogangular-c7858.web.app/"> 
+          Canal WebDeveloper 
+      </a>
+      <h5 class="form-inline">Urian Viera</h5>
+  </nav>
 
 	
   <div class="container mt-5">
-
-        <h3 class="text-center mb-5" style="color:#555 ; font-weight: 800;">
-            Cuál es la diferencia entre los atributos <span style="color: orange;"> DISABLED, READONLY, HIDDEN y REQUIRED </span>
+    <h3 class="text-center mb-5" style="color:#555 ; font-weight: 800;">
+          Cuál es la diferencia entre los atributos <span style="color: orange;"> DISABLED, READONLY, HIDDEN y REQUIRED </span>
         <hr>
-        </h3>
+      </h3>
         
 
-        <form id="formulario" action="enviar.php" enctype="multipart/form-data" method="post" name="formulario">
+      <form  name="formulario" id="formulario" action="enviar.php" method="post" enctype="multipart/form-data">
         <div class="row justify-content-center">
             <div class="col-6">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre Completo</label>
                     <input type="text" name="nombre"  placeholder="Escriba su Nombre"  class="form-control" required="true">
                 </div>
             </div>
              <div class="col-6">
                 <div class="form-group">
                     <label for="Email">Email</label>
-                    <input type="email" name="email" placeholder="Enter email"  class="form-control">
+                    <input type="email" name="email" placeholder="Su email"  class="form-control">
                 </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input id="my_file" name="my_file" type="file"  class="form-control">
-                </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Archivo</span>
             </div>
-          
+            <div class="custom-file">
+              <input type="file" name="my_file" id="my_file" class="custom-file-input">
+              <label class="custom-file-label" for="inputGroupFile01">Hacer click aqui..!</label>
+            </div>
           </div>
 
           <div class="col-12 text-center mt-5 mb-5">
