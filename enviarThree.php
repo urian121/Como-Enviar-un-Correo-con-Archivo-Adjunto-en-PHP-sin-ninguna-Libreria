@@ -1,5 +1,5 @@
 <?php
-$Nombre 			= $_REQUEST['Nombre'];
+$Nombre 			= $_REQUEST['nombre'];
 $email 				= $_REQUEST['email'];
 $mensaje 			= $_REQUEST['mensaje'];
 
