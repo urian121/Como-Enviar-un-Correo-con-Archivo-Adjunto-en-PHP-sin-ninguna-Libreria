@@ -11,7 +11,7 @@ $fileSource   		= $_FILES["my_file"]["tmp_name"];
 
 $sPara 				='urian1213viera@gmail.com';
 $sAsunto 			='Probando_'.date('Y-m-d');
-$desde 				="webdeveloper.com";
+$desde 				="Canal webdeveloper";
 
 $sCabeceras 		= "From:".$desde."\n";
 $sCabeceras 	   .= "MIME-version: 1.0\n";

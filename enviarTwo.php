@@ -7,14 +7,10 @@ $fileType 		= $_FILES["my_file"]["type"];
 $fileName 		= $_FILES["my_file"]["name"];
 $fileSource   	= $_FILES["my_file"]["tmp_name"];
 
-echo '<pre>';
-	print_r($_POST);
-echo '</pre>';
 
 foreach ($_POST as $datos => $valores){
 	$sTexto = $sTexto."\n".$datos." = ".$valores;	
 }
-
 
 
 $sPara 				 = $email;
@@ -22,9 +18,8 @@ $sAsunto 			 = "Bienvenidos amigos";
 
 $sCabeceras 	 	 = "From: Bienvenidos\r\n"; 
 $sCabeceras     	.= "MIME-version: 1.0\n";
-$sCabeceras 		.= "Content-type: multipart/mixed;"; //para enviar archivo adjunto adjunto en el correo
+$sCabeceras 		.= "Content-type: multipart/mixed;\n"; //para enviar archivo adjunto adjunto en el correo
 $sCabeceras         .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
-
 
 //$sCabeceras         .= "Content-Type: multipart/alternative;\n";
 //$sCabeceras         .= "Content-Type: text/plain; charset=utf-8\n";

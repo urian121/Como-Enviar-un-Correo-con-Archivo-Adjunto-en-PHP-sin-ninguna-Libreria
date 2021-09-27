@@ -5,8 +5,8 @@
     $desdEmail           = 'programadorphp2017@gmail.com'; 
    
     //Construyo el cuerpo del mensaje    
-    $message = "Nombre: " . $nombreCompleto . "\n";
-    $message = $message . "Email: " . $email . "\n";
+    $message            = "Nombre: " . $nombreCompleto . "\n";
+    $message            = $message . "Email: " . $email . "\n";
    
     //Obtener datos del archivo subido 
     $file_tmp_name      = $_FILES['my_file']['tmp_name'];
@@ -43,7 +43,7 @@
     $body               .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
     $body               .= $encoded_content; 
        
-    $subject            = "Asunto del mensaje.";
+    $subject            = "Hola amigos WebDeveloper";
     
     //Enviando el mail
     $sentMail = mail($email, $subject, $body, $headers);
