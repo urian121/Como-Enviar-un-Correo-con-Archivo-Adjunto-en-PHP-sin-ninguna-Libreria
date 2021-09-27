@@ -1,12 +1,11 @@
 <?php
 $Nombre 		= $_REQUEST['Nombre'];
 $email 			= $_REQUEST['email'];
-$asunto 		= $_REQUEST['asunto'];
 $mensaje 		= $_REQUEST['mensaje'];
 
-$fileType 		= $_FILES["archivo1"]["type"];
-$fileName 		= $_FILES["archivo1"]["name"];
-$fileSource   	= $_FILES["archivo1"]["tmp_name"];
+$fileType 		= $_FILES["my_file"]["type"];
+$fileName 		= $_FILES["my_file"]["name"];
+$fileSource   	= $_FILES["my_file"]["tmp_name"];
 
 echo '<pre>';
 	print_r($_POST);
@@ -19,7 +18,7 @@ foreach ($_POST as $datos => $valores){
 
 
 $sPara 				 = $email;
-$sAsunto 			 = $asunto;
+$sAsunto 			 = "Bienvenidos amigos";
 
 $sCabeceras 	 	 = "From: Bienvenidos\r\n"; 
 $sCabeceras     	.= "MIME-version: 1.0\n";
@@ -59,9 +58,9 @@ fclose($oFichero);
 $sTexto 			.= $sAdjuntos."\n\n----_Separador-de-mensajes_----\n";
 
 if(mail($sPara, $sAsunto, $sTexto, $sCabeceras)){
-	echo 'Correo enviado';
+	echo 'El Correo fue enviado.';
 }else{
-	echo 'error';
+	echo 'No se pudo enviar el correo.';
 }
 
 ?>

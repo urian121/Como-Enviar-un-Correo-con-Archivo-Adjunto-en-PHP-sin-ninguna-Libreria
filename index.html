@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/material.min.css" rel="stylesheet">
-    <title>Como enviar Archivo Adjunto a correo con PHP</title>
+    <title>Como enviar Archivo Adjunto a un correo electronico con PHP</title>
   </head>
   <body>
     <nav class="navbar navbar-light bg-light " style="color: #fff !important; background-color: #563d7c !important;">
@@ -16,15 +16,24 @@
       <h5 class="form-inline">Urian Viera</h5>
   </nav>
 
+<!---
+Como-Enviar-un-Email-con-Archivo-Adjunto-en-PHP-sin-ninguna-Libreria
+Enviar un email con adjuntos utilizando jQuery, Ajax y PHP sin refrescar la página
+Enviar Email Con Archivo Adjunto Con PHP
+Enviar un email con adjuntos en PHP
+Cómo enviar un email con adjuntos
+Enviar un correo con archivo adjunto usando PHP mail()
+http://www.federicoperichon.com.ar/enviar-un-correo-con-archivo-adjunto-usando-php-mail
+-->
 	
   <div class="container mt-5">
     <h3 class="text-center mb-5" style="color:#555 ; font-weight: 800;">
-          Cuál es la diferencia entre los atributos <span style="color: orange;"> DISABLED, READONLY, HIDDEN y REQUIRED </span>
+          Cómo enviar Archivo Adjunto a un correo electronico con PHP <span style="color: orange;"> Fácil</span>
         <hr>
       </h3>
         
 
-      <form  name="formulario" id="formulario" action="enviar.php" method="post" enctype="multipart/form-data">
+    <form  name="formulario" id="formulario" action="enviarOne.php" method="post" enctype="multipart/form-data">
         <div class="row justify-content-center">
             <div class="col-6">
                 <div class="form-group">
@@ -40,11 +49,24 @@
             </div>
           </div>
 
+          <!--
+          <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="mensaje">Escriba su Mensaje</label>
+                    <textarea name="mensaje"  placeholder="Mensaje"  class="form-control" required="true" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="col-6"></div>
+          </div>
+          --->
+
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Archivo</span>
             </div>
             <div class="custom-file">
+              <p>Adjuntar archivo: <input type='file' name='archivo1' id='archivo1'></p>
               <input type="file" name="my_file" id="my_file" class="custom-file-input">
               <label class="custom-file-label" for="inputGroupFile01">Hacer click aqui..!</label>
             </div>
