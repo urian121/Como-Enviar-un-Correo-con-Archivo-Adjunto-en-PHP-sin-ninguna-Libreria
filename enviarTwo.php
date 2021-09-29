@@ -1,7 +1,7 @@
 <?php
 $Nombre 		= $_REQUEST['Nombre'];
 $email 			= $_REQUEST['email'];
-$mensaje 		= $_REQUEST['mensaje'];
+$mensaje 		= "Hola soy el msjs";
 
 $fileType 		= $_FILES["my_file"]["type"];
 $fileName 		= $_FILES["my_file"]["name"];
@@ -23,11 +23,11 @@ $Cabeceras     	    .= "MIME-version: 1.0\n";
 $Cabeceras 		    .= "Content-type: multipart/mixed;"; //para enviar archivo adjunto al correo electronico
 $Cabeceras 		    .= "boundary=\"--_Separador-de-mensajes_--\"\n";
 
-$CabeceraTexto 	 	= "----_Separador-de-mensajes_--\n";
-$CabeceraTexto 		.= "Content-type: text/plain;charset=iso-8859-1\n";
-$CabeceraTexto 		.= "Content-transfer-encoding: 7BIT\n";
+$sCabeceraTexto 	 = "----_Separador-de-mensajes_--\n";
+$sCabeceraTexto 	.= "Content-type: text/plain;charset=iso-8859-1\n";
+$sCabeceraTexto 	.= "Content-transfer-encoding: 7BIT\n";
 
-$cuerpo 			= $CabeceraTexto.$cuerpo;
+$cuerpo 			= $sCabeceraTexto.$cuerpo;
 
 $cuerpoArchivoAdjuntos 			.= "\n\n----_Separador-de-mensajes_--\n";
 $cuerpoArchivoAdjuntos 			.= "Content-type: ".$fileType.";name=\"".$fileName."\"\n";;

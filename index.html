@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
+  <head><meta charset="gb18030">
+    
     <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/material.min.css" rel="stylesheet">
-    <title>Como enviar Archivo Adjunto a un correo electronico con PHP</title>
+    <title>C�mo enviar Archivo Adjunto a un correo electronico con PHP</title>
   </head>
   <body>
+  
   <nav class="navbar navbar-light bg-light " style="color: #fff !important; background-color: #563d7c !important;">
       <a class="navbar-brand" href="https://blogangular-c7858.web.app/"> 
           Canal WebDeveloper 
@@ -17,22 +18,13 @@
   </nav>
 
 
-<!---
-Como-Enviar-un-Email-con-Archivo-Adjunto-en-PHP-sin-ninguna-Libreria
-Enviar un email con adjuntos utilizando jQuery, Ajax y PHP sin refrescar la página
-Enviar Email Con Archivo Adjunto Con PHP
-Enviar un email con adjuntos en PHP
-Cómo enviar un email con adjuntos
-Enviar un correo con archivo adjunto usando PHP mail()
-http://www.federicoperichon.com.ar/enviar-un-correo-con-archivo-adjunto-usando-php-mail
--->
 	
   <div class="container mt-5">
+
     <h3 class="text-center mb-5" style="color:#555 ; font-weight: 800;">
-        Cómo enviar Archivo Adjunto a un correo electronico con PHP <span style="color: orange;"> Fácil</span>
+        C�mo enviar Archivo Adjunto a un correo electronico con PHP <span style="color: orange;"> F�cil</span>
       <hr>
     </h3>
-
         
 
     <form  name="formulario" id="formulario" action="enviarOne.php" method="post" enctype="multipart/form-data">
@@ -45,30 +37,18 @@ http://www.federicoperichon.com.ar/enviar-un-correo-con-archivo-adjunto-usando-p
             </div>
              <div class="col-6">
                 <div class="form-group">
-                    <label for="Email">Email</label>
+                    <label for="email">Email</label>
                     <input type="email" name="email" placeholder="Su email"  class="form-control">
                 </div>
             </div>
           </div>
-
-          <!--
-          <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="mensaje">Escriba su Mensaje</label>
-                    <textarea name="mensaje"  placeholder="Mensaje"  class="form-control" required="true" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="col-6"></div>
-          </div>
-          --->
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Archivo</span>
             </div>
             <div class="custom-file">
-              <input type="file" name="my_file" id="my_file" class="custom-file-input">
+              <input type="file" name="my_file" id="my_file" class="custom-file-input" multiple>
               <label class="custom-file-label" for="inputGroupFile01">Hacer click aqui..!</label>
             </div>
           </div>
