@@ -43,7 +43,9 @@ fclose($oFichero);
 $cuerpo 			.= $cuerpoArchivoAdjuntos."\n\n----_Separador-de-mensajes_----\n";
 
 if(mail($Para, $Asunto, $cuerpo, $Cabeceras)){
-	echo"<br><h3><center style='color:green;'>Formulario enviado, revisar el Email.</center></h3>";
+	echo"<p style='color:green; text-align: center; margin-top: 100px;'>
+        Formulario enviado, revisar el Email.</center>
+    </p>";
 }else{
 	echo 'No se pudo enviar el correo.';
 }

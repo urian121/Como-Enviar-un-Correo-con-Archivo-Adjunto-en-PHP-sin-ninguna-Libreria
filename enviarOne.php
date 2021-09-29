@@ -48,7 +48,8 @@
     //Enviando el mail
     $sentMail = mail($email, $subject, $body, $headers);
     if($sentMail){       
-        echo"<br><h2><center style='color:green;'>Formulario enviado, revisar el Email.</center></h2>";
+        echo"<p style='color:green; text-align: center; margin-top: 100px;'>
+            Formulario enviado, revisar el Email.</center></p>";
     }else{
         echo "<h2>Se produjo un error y su pedido no pudo ser enviado</h2>";
     }  
